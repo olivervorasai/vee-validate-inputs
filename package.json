@@ -1,0 +1,22 @@
+{
+    "name": "@olivervorasai/vee-validate-inputs",
+    "version": "0.0.1",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "files": [
+        "dist/*"
+    ],
+    "author": "Oliver Vorasai <olivervorasai@gmail.com>",
+    "scripts": {
+        "build": "rollup -c"
+    },
+    "peerDependencies": {
+        "vue": "^3.2.21"
+    },
+    "devDependencies": {
+        "rollup": "^2.75.3",
+        "rollup-plugin-peer-deps-external": "^2.2.4",
+        "rollup-plugin-vue": "^6.0.0"
+    }
+}
+
