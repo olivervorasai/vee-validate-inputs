@@ -8,7 +8,10 @@
     ],
     "author": "Oliver Vorasai <olivervorasai@gmail.com>",
     "scripts": {
-        "build": "rollup -c"
+        "build": "rollup -c",
+        "docs:dev": "vitepress dev docs",
+        "docs:build": "vitepress build docs",
+        "docs:serve": "vitepress serve docs"
     },
     "peerDependencies": {
         "vue": "^3.2.21"
@@ -16,7 +19,10 @@
     "devDependencies": {
         "rollup": "^2.75.3",
         "rollup-plugin-peer-deps-external": "^2.2.4",
-        "rollup-plugin-vue": "^6.0.0"
+        "rollup-plugin-vue": "^6.0.0",
+        "vitepress": "^0.22.4"
+    },
+    "dependencies": {
+        "vee-validate": "^4.5.11"
     }
 }
-
