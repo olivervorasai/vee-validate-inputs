@@ -21,6 +21,6 @@
         "rollup": "^2.75.3",
         "rollup-plugin-peer-deps-external": "^2.2.4",
         "rollup-plugin-vue": "^6.0.0",
-        "vitepress": "^0.22.4"
+        "vitepress": "^1.0.0-alpha.1"
     }
 }
