@@ -23,7 +23,7 @@ const { handleSubmit } = useForm({
 
 <script setup>
 import { useForm } from "vee-validate";
-import InputTextarea from '../../src/InputTextarea.vue';
+import InputTextarea from '../../src/components/inputs/InputTextarea.vue';
 
 const { handleSubmit } = useForm({
     initialValues: {

@@ -1,14 +1,23 @@
 {
     "name": "@olivervorasai/vee-validate-inputs",
     "version": "0.0.1",
-    "main": "dist/index.js",
-    "module": "dist/index.mjs",
     "files": [
-        "dist/*"
+        "dist"
     ],
+    "main": "./dist/vee-validate-inputs.umd.js",
+    "module": "./dist/vee-validate-inputs.es.js",
+    "exports": {
+        ".": {
+            "import": "./dist/vee-validate-inputs.es.js",
+            "require": "./dist/vee-validate-inputs.umd.js"
+        }
+    },
     "author": "Oliver Vorasai <olivervorasai@gmail.com>",
     "scripts": {
-        "build": "rollup -c",
+        "dev": "vite",
+        "build": "vue-tsc --noEmit && vite build",
+        "build:nocheck": "vite build",
+        "preview": "vite preview",
         "docs:dev": "vitepress dev docs",
         "docs:build": "vitepress build docs",
         "docs:serve": "vitepress serve docs"
@@ -20,6 +29,7 @@
     "devDependencies": {
         "@rushstack/eslint-patch": "^1.1.3",
         "@types/node": "^17.0.38",
+        "@vitejs/plugin-vue": "^2.3.3",
         "@vue/eslint-config-prettier": "^7.0.0",
         "@vue/eslint-config-typescript": "^10.0.0",
         "@vue/tsconfig": "^0.1.3",
@@ -29,11 +39,9 @@
         "postcss": "^8.4.14",
         "postcss-nesting": "^10.1.7",
         "prettier": "^2.6.2",
-        "rollup": "^2.75.3",
-        "rollup-plugin-peer-deps-external": "^2.2.4",
-        "rollup-plugin-typescript": "^1.0.1",
-        "rollup-plugin-vue": "^6.0.0",
         "typescript": "^4.7.2",
-        "vitepress": "^1.0.0-alpha.1"
+        "vite": "^2.9.9",
+        "vitepress": "^1.0.0-alpha.1",
+        "vue-tsc": "^0.34.7"
     }
 }
