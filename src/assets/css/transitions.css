@@ -1,0 +1,4 @@
+:root {
+    --transition-basic: all 350ms cubic-bezier(0.25, 0.8, 0.25, 1);
+    --transition-fast: all 200ms cubic-bezier(0.25, 0.8, 0.25, 1);
+}

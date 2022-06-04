@@ -51,7 +51,6 @@ const { value, handleBlur, handleChange, meta } = useField<string>(props.name);
 </template>
 
 <style lang="postcss" scoped>
-
 .input {
     flex: 1;
     width: 100%; /* Needed for vertical (flex-direction: column, align-items: flex-start) */

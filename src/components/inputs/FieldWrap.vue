@@ -51,7 +51,6 @@ const props = withDefaults(
 </template>
 
 <style lang="postcss" scoped>
-
 .field-wrap {
     &.disabled {
         opacity: 0.5;
@@ -70,7 +69,7 @@ const props = withDefaults(
 .label {
     flex: none;
     width: var(--field-wrap-width, 9rem);
-    font-weight: var(--font-weight-bold);
+    font-weight: var(--field-wrap-font-weight, bold);
     line-height: 1;
     /* Change indicator */
     &::after {

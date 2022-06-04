@@ -1,0 +1,36 @@
+:root {
+    /* Color Wheel */
+    --color-blue-dark: #3182ce;
+    --color-blue-light: #ebf8ff;
+    --color-cyan-dark: #1c7ab8;
+    --color-cyan-light: #dcf2ff;
+    --color-green-dark: #38a169;
+    --color-green-light: #f0fff4;
+    --color-yellow-dark: #d69e2e;
+    --color-yellow-light: #fffff0;
+    --color-orange-dark: #ed8936;
+    --color-orange-light: #fffaf0;
+    --color-red-dark: #e53e3e;
+    --color-red-light: #fff5f5;
+    --color-purple-dark: #805ad5;
+    --color-purple-light: #faf5ff;
+    --color-violet-dark: #5a67d8;
+    --color-violet-light: #ebf4ff;
+
+    /* Grayscale */
+    --color-gray-very-light: #f7f9ff;
+    --color-gray-light: #cbccd7;
+    --color-gray-medium: #666f89;
+    --color-gray-dark: #595c65;
+    --color-gray-very-dark: #2a2d38;
+
+    /* Status Section */
+    --color-success: #39d698;
+    --color-error: #fe808b;
+    --color-warning: #f6c98b;
+    --color-changed: #f6ac41;
+
+    /* Font */
+    --color-font-dark: hsl(194deg 100% 12%);
+    --color-font-light: hsl(194deg 100% 98%);
+}
