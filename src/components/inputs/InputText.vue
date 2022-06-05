@@ -62,6 +62,7 @@ const { value, handleBlur, handleChange, meta } = useField<string>(props.name);
     line-height: 1;
     text-overflow: ellipsis;
     transition: var(--transition-basic);
+
     &:focus {
         outline: none;
         box-shadow: var(--shadow-focus);
@@ -72,6 +73,7 @@ const { value, handleBlur, handleChange, meta } = useField<string>(props.name);
 .flat {
     border: none;
     background-color: transparent;
+
     &:focus {
         box-shadow: initial;
     }

@@ -56,21 +56,25 @@ const props = withDefaults(
         opacity: 0.5;
     }
 }
+
 .content {
     position: relative;
     display: flex;
     align-items: center;
     gap: 0.25rem;
+
     &.vertical {
         flex-direction: column;
         align-items: flex-start;
     }
 }
+
 .label {
     flex: none;
     width: var(--field-wrap-width, 9rem);
     font-weight: var(--field-wrap-font-weight, bold);
     line-height: 1;
+
     /* Change indicator */
     &::after {
         content: '';
@@ -85,21 +89,25 @@ const props = withDefaults(
         transition: var(--transition-fast);
         background-color: var(--color-changed);
     }
+
     &.changed {
         &::after {
             transform: scaleY(1);
         }
     }
 }
+
 .error-message {
     display: block;
     text-align: right;
     color: var(--color-error);
 }
+
 /* Custom styles */
 .flat {
     transition: var(--transition-basic);
     border-bottom: 1px solid var(--color-gray-light);
+
     &:focus-within {
         border-color: var(--color-accent);
     }

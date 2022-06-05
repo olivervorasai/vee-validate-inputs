@@ -20,7 +20,10 @@
         "preview": "vite preview",
         "docs:dev": "vitepress dev docs",
         "docs:build": "vitepress build docs",
-        "docs:serve": "vitepress serve docs"
+        "docs:serve": "vitepress serve docs",
+        "lint": "eslint . --ext .vue,.ts --ignore-path .gitignore",
+        "lint:css": "stylelint **/*.{css,vue} --formatter verbose",
+        "prepare": "husky install"
     },
     "peerDependencies": {
         "vee-validate": "^4.5.11",
@@ -36,12 +39,24 @@
         "autoprefixer": "^10.4.7",
         "eslint": "^8.16.0",
         "eslint-plugin-vue": "^8.7.1",
+        "husky": "^8.0.1",
+        "lint-staged": "^13.0.0",
         "postcss": "^8.4.14",
         "postcss-nesting": "^10.1.7",
         "prettier": "^2.6.2",
+        "stylelint": "^14.1.0",
+        "stylelint-config-prettier": "^9.0.3",
+        "stylelint-config-recommended-vue": "^1.0.0",
+        "stylelint-config-standard": "^25.0.0",
         "typescript": "^4.7.2",
         "vite": "^2.9.9",
         "vitepress": "^1.0.0-alpha.1",
         "vue-tsc": "^0.34.7"
+    },
+    "lint-staged": {
+        "*.{vue,ts}": [
+            "eslint --ext .ts,.vue --ignore-path .gitignore ."
+        ],
+        "*.{css,vue}": "stylelint"
     }
 }
