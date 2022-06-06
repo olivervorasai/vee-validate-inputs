@@ -12,8 +12,15 @@
         "esModuleInterop": true,
         "lib": ["esnext", "dom"],
         "skipLibCheck": true,
-        "types": ["node"]
+        "types": ["node"],
+        "outDir": "dist",
+        "declaration": true
     },
-    "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+    "include": [
+        "vite.config.ts",
+        "src/components/**/*.ts",
+        "src/components/**/*.d.ts",
+        "src/components/**/*.vue"
+    ],
     "references": [{ "path": "./tsconfig.node.json" }]
 }

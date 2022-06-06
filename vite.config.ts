@@ -9,7 +9,7 @@ export default defineConfig({
             entry: fileURLToPath(
                 new URL('./src/components/inputs/index.ts', import.meta.url)
             ),
-            name: '@olivervorasai/vee-validate-inputs',
+            name: 'vee-validate-inputs',
             fileName: (format) => `vee-validate-inputs.${format}.js`,
         },
         rollupOptions: {
@@ -17,7 +17,7 @@ export default defineConfig({
             output: {
                 globals: {
                     vue: 'Vue',
-                    'vee-validate': 'VeeValidate',
+                    'vee-validate': 'vee-validate',
                 },
             },
         },
