@@ -61,11 +61,11 @@ const { value, handleBlur, handleChange, meta } = useField<string>(props.name);
     font: inherit;
     line-height: 1;
     text-overflow: ellipsis;
-    transition: var(--transition-basic);
+    transition: var(--v-inputs-transition-basic);
 
     &:focus {
         outline: none;
-        box-shadow: var(--shadow-focus);
+        box-shadow: var(--v-inputs-shadow-focus);
     }
 }
 

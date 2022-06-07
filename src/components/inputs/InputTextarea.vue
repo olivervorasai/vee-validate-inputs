@@ -61,7 +61,7 @@ const { value, handleBlur, handleChange, meta } = useField<string>(props.name);
 
     &:focus {
         outline: none;
-        box-shadow: var(--shadow-focus);
+        box-shadow: var(--v-inputs-shadow-focus);
     }
 }
 </style>

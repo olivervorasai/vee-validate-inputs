@@ -1,36 +1,36 @@
 :root {
     /* Color Wheel */
-    --color-blue-dark: #3182ce;
-    --color-blue-light: #ebf8ff;
-    --color-cyan-dark: #1c7ab8;
-    --color-cyan-light: #dcf2ff;
-    --color-green-dark: #38a169;
-    --color-green-light: #f0fff4;
-    --color-yellow-dark: #d69e2e;
-    --color-yellow-light: #fffff0;
-    --color-orange-dark: #ed8936;
-    --color-orange-light: #fffaf0;
-    --color-red-dark: #e53e3e;
-    --color-red-light: #fff5f5;
-    --color-purple-dark: #805ad5;
-    --color-purple-light: #faf5ff;
-    --color-violet-dark: #5a67d8;
-    --color-violet-light: #ebf4ff;
+    --v-inputs-color-blue-dark: #3182ce;
+    --v-inputs-color-blue-light: #ebf8ff;
+    --v-inputs-color-cyan-dark: #1c7ab8;
+    --v-inputs-color-cyan-light: #dcf2ff;
+    --v-inputs-color-green-dark: #38a169;
+    --v-inputs-color-green-light: #f0fff4;
+    --v-inputs-color-yellow-dark: #d69e2e;
+    --v-inputs-color-yellow-light: #fffff0;
+    --v-inputs-color-orange-dark: #ed8936;
+    --v-inputs-color-orange-light: #fffaf0;
+    --v-inputs-color-red-dark: #e53e3e;
+    --v-inputs-color-red-light: #fff5f5;
+    --v-inputs-color-purple-dark: #805ad5;
+    --v-inputs-color-purple-light: #faf5ff;
+    --v-inputs-color-violet-dark: #5a67d8;
+    --v-inputs-color-violet-light: #ebf4ff;
 
     /* Grayscale */
-    --color-gray-very-light: #f7f9ff;
-    --color-gray-light: #cbccd7;
-    --color-gray-medium: #666f89;
-    --color-gray-dark: #595c65;
-    --color-gray-very-dark: #2a2d38;
+    --v-inputs-color-gray-very-light: #f7f9ff;
+    --v-inputs-color-gray-light: #cbccd7;
+    --v-inputs-color-gray-medium: #666f89;
+    --v-inputs-color-gray-dark: #595c65;
+    --v-inputs-color-gray-very-dark: #2a2d38;
 
     /* Status Section */
-    --color-success: #39d698;
-    --color-error: #fe808b;
-    --color-warning: #f6c98b;
-    --color-changed: #f6ac41;
+    --v-inputs-color-success: #39d698;
+    --v-inputs-color-error: #fe808b;
+    --v-inputs-color-warning: #f6c98b;
+    --v-inputs-color-changed: #f6ac41;
 
     /* Font */
-    --color-font-dark: hsl(194deg 100% 12%);
-    --color-font-light: hsl(194deg 100% 98%);
+    --v-inputs-color-font-dark: hsl(194deg 100% 12%);
+    --v-inputs-color-font-light: hsl(194deg 100% 98%);
 }

@@ -86,8 +86,8 @@ const props = withDefaults(
         bottom: 0;
         left: -10px;
         transform: scaleY(0);
-        transition: var(--transition-fast);
-        background-color: var(--color-changed);
+        transition: var(--v-inputs-transition-fast);
+        background-color: var(--v-inputs-color-changed);
     }
 
     &.changed {
@@ -100,16 +100,16 @@ const props = withDefaults(
 .error-message {
     display: block;
     text-align: right;
-    color: var(--color-error);
+    color: var(--v-inputs-color-error);
 }
 
 /* Custom styles */
 .flat {
-    transition: var(--transition-basic);
-    border-bottom: 1px solid var(--color-gray-light);
+    transition: var(--v-inputs-transition-basic);
+    border-bottom: 1px solid var(--v-inputs-color-gray-light);
 
     &:focus-within {
-        border-color: var(--color-accent);
+        border-color: var(--v-inputs-color-accent);
     }
 }
 </style>

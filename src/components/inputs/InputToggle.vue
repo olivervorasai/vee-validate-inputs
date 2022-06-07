@@ -65,7 +65,7 @@ const { value, meta, handleChange } = useField<string>(props.name);
     user-select: none;
     border-width: 1px 1px 1px 0;
     border-style: solid;
-    border-color: var(--color-gray-light);
+    border-color: var(--v-inputs-color-gray-light);
     background-color: white;
 
     &:first-child {
@@ -78,12 +78,12 @@ const { value, meta, handleChange } = useField<string>(props.name);
     }
 
     &:hover {
-        background-color: var(--color-gray-light);
+        background-color: var(--v-inputs-color-gray-light);
     }
 
     &.selected {
-        border-color: var(--color-blue-dark);
-        background-color: var(--color-blue-dark);
+        border-color: var(--v-inputs-color-blue-dark);
+        background-color: var(--v-inputs-color-blue-dark);
         color: white;
     }
 }
