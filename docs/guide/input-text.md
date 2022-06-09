@@ -4,6 +4,7 @@
 
 ```vue
 <script setup>
+import '/node_modules/@olivervorasai/vee-validate-inputs/dist/style.css';
 import { useForm } from 'vee-validate';
 import { InputText } from '@olivervorasai/vee-validate-inputs';
 
