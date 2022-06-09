@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress';
 
 export default defineConfig({
+    base: '/vee-validate-inputs/',
     title: 'VeeValidate Inputs',
     description: 'Just playing around.',
     themeConfig: {
