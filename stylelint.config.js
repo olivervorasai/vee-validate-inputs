@@ -7,6 +7,7 @@ module.exports = {
     rules: {
         indentation: 4,
         'value-keyword-case': ['lower', { ignoreFunctions: ['v-bind'] }],
+        'selector-nested-pattern': '^&',
     },
     ignoreFiles: ['dist/**/*.css'],
 };
