@@ -6,6 +6,7 @@ import FieldWrap from './FieldWrap.vue';
 const props = withDefaults(
     defineProps<{
         disabled?: boolean;
+        hideError?: boolean;
         label?: string;
         name: string;
         options: { label: string; value: string }[];
@@ -14,6 +15,7 @@ const props = withDefaults(
     }>(),
     {
         disabled: false,
+        hideError: false,
         label: '',
         showChanged: false,
         vertical: false,
@@ -26,14 +28,16 @@ const { value, meta, handleChange } = useField<string>(props.name);
 <template>
     <FieldWrap
         :changed="showChanged ? meta.dirty : false"
-        :label="label"
-        :name="name"
-        :vertical="vertical"
+        :disabled="props.disabled"
+        :hide-error="props.hideError"
+        :label="props.label"
+        :name="props.name"
+        :vertical="props.vertical"
     >
         <div class="input-wrap">
             <div
                 v-for="(option, index) in props.options"
-                :key="`${name}-${option.value}-${index}`"
+                :key="`${props.name}-${option.value}-${index}`"
                 :class="['toggle', { selected: option.value === value }]"
                 role="radio"
                 tabindex="0"
@@ -49,10 +53,6 @@ const { value, meta, handleChange } = useField<string>(props.name);
 </template>
 
 <style lang="postcss" scoped>
-.textarea-wrap-container {
-    width: 100%;
-}
-
 .input-wrap {
     display: flex;
     align-items: center;

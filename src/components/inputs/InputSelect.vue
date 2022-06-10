@@ -7,6 +7,7 @@ const props = withDefaults(
     defineProps<{
         disabled?: boolean;
         flat?: boolean;
+        hideError?: boolean;
         label?: string;
         name: string;
         options: { label: string; value: string }[];
@@ -16,6 +17,7 @@ const props = withDefaults(
     {
         disabled: false,
         flat: false,
+        hideError: false,
         label: '',
         showChanged: false,
         vertical: false,
@@ -27,18 +29,19 @@ const { value, handleBlur, handleChange, meta } = useField(props.name);
 
 <template>
     <FieldWrap
-        :changed="showChanged ? meta.dirty : false"
-        :disabled="disabled"
-        :flat="flat"
-        :label="label"
-        :name="name"
-        :vertical="vertical"
+        :changed="props.showChanged ? meta.dirty : false"
+        :disabled="props.disabled"
+        :flat="props.flat"
+        :hide-error="props.hideError"
+        :label="props.label"
+        :name="props.name"
+        :vertical="props.vertical"
     >
         <select
-            :id="name"
+            :id="props.name"
             :value="value"
-            :name="name"
-            :disabled="disabled"
+            :name="props.name"
+            :disabled="props.disabled"
             :class="{ input: true, flat: props.flat }"
             @input="handleChange"
             @blur="handleBlur"
@@ -46,7 +49,7 @@ const { value, handleBlur, handleChange, meta } = useField(props.name);
             <option value=""></option>
 
             <option
-                v-for="(option, index) in options"
+                v-for="(option, index) in props.options"
                 :key="`${option.value}-${index}`"
                 :value="option.value"
             >
@@ -60,7 +63,7 @@ const { value, handleBlur, handleChange, meta } = useField(props.name);
 .input {
     flex: 1;
     width: 100%; /* Needed for vertical (flex-direction: column, align-items: flex-start) */
-    height: 2rem;
+    min-height: 2rem;
     padding: 0 0.75rem;
     border: 1px solid currentcolor;
     border-radius: 4px;

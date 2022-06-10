@@ -7,6 +7,7 @@ const props = withDefaults(
     defineProps<{
         disabled?: boolean;
         flat?: boolean;
+        hideError?: boolean;
         label?: string;
         name: string;
         showChanged?: boolean;
@@ -16,6 +17,7 @@ const props = withDefaults(
     {
         disabled: false,
         flat: false,
+        hideError: false,
         label: '',
         showChanged: false,
         type: 'datetime-local',
@@ -28,20 +30,21 @@ const { value, handleBlur, handleChange, meta } = useField(props.name);
 
 <template>
     <FieldWrap
-        :changed="showChanged ? meta.dirty : false"
-        :disabled="disabled"
-        :flat="flat"
-        :label="label"
-        :name="name"
-        :vertical="vertical"
+        :changed="props.showChanged ? meta.dirty : false"
+        :disabled="props.disabled"
+        :flat="props.flat"
+        :hide-error="props.hideError"
+        :label="props.label"
+        :name="props.name"
+        :vertical="props.vertical"
     >
         <input
-            :id="name"
+            :id="props.name"
             :value="value"
-            :name="name"
-            :disabled="disabled"
-            :type="type"
-            class="input"
+            :name="props.name"
+            :disabled="props.disabled"
+            :type="props.type"
+            :class="{ input: true, flat: props.flat }"
             @input="handleChange"
             @blur="handleBlur"
         />
@@ -59,13 +62,19 @@ const { value, handleBlur, handleChange, meta } = useField(props.name);
     font: inherit;
     line-height: 1;
 
-    &:disabled {
-        opacity: 0.5;
-    }
-
     &:focus {
         outline: none;
         box-shadow: var(--v-inputs-shadow-focus);
+    }
+}
+
+/* Custom styles */
+.flat {
+    border: none;
+    background-color: transparent;
+
+    &:focus {
+        box-shadow: initial;
     }
 }
 </style>

@@ -11,7 +11,7 @@ const props = withDefaults(
         label?: string;
         name: string;
         showChanged?: boolean;
-        type: string;
+        type: 'text' | 'password' | 'email' | 'number' | 'tel' | 'url';
         vertical?: boolean;
     }>(),
     {
@@ -29,20 +29,20 @@ const { value, handleBlur, handleChange, meta } = useField<string>(props.name);
 
 <template>
     <FieldWrap
-        :changed="showChanged ? meta.dirty : false"
-        :disabled="disabled"
-        :flat="flat"
+        :changed="props.showChanged ? meta.dirty : false"
+        :disabled="props.disabled"
+        :flat="props.flat"
         :hide-error="props.hideError"
         :label="props.label"
         :name="props.name"
         :vertical="props.vertical"
     >
         <input
-            :id="name"
+            :id="props.name"
             :value="value"
-            :name="name"
-            :type="type"
-            :disabled="disabled"
+            :name="props.name"
+            :type="props.type"
+            :disabled="props.disabled"
             :class="{ input: true, flat: props.flat }"
             @input="handleChange"
             @blur="handleBlur"

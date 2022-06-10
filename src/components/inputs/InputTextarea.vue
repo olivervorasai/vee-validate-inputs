@@ -6,6 +6,8 @@ import FieldWrap from './FieldWrap.vue';
 const props = withDefaults(
     defineProps<{
         disabled?: boolean;
+        flat?: boolean;
+        hideError?: boolean;
         height?: number;
         label?: string;
         name: string;
@@ -14,6 +16,8 @@ const props = withDefaults(
     }>(),
     {
         disabled: false,
+        flat: false,
+        hideError: false,
         height: 5,
         label: '',
         showChanged: false,
@@ -26,18 +30,21 @@ const { value, handleBlur, handleChange, meta } = useField<string>(props.name);
 
 <template>
     <FieldWrap
-        :changed="showChanged ? meta.dirty : false"
-        :label="label"
-        :name="name"
-        :vertical="vertical"
+        :changed="props.showChanged ? meta.dirty : false"
+        :disabled="props.disabled"
+        :flat="props.flat"
+        :hide-error="props.hideError"
+        :label="props.label"
+        :name="props.name"
+        :vertical="props.vertical"
     >
         <textarea
-            :id="name"
+            :id="props.name"
             :value="value"
-            :name="name"
-            :disabled="disabled"
-            :rows="height"
-            class="input"
+            :name="props.name"
+            :disabled="props.disabled"
+            :rows="props.height"
+            :class="{ input: true, flat: props.flat }"
             @input="handleChange"
             @blur="handleBlur"
         ></textarea>
@@ -62,6 +69,16 @@ const { value, handleBlur, handleChange, meta } = useField<string>(props.name);
     &:focus {
         outline: none;
         box-shadow: var(--v-inputs-shadow-focus);
+    }
+}
+
+/* Custom styles */
+.flat {
+    border: none;
+    background-color: transparent;
+
+    &:focus {
+        box-shadow: initial;
     }
 }
 </style>
