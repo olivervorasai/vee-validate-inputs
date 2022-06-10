@@ -27,6 +27,9 @@ export default defineConfig({
                 items: [
                     { text: 'InputText', link: '/guide/input-text' },
                     { text: 'InputTextarea', link: '/guide/input-textarea' },
+                    { text: 'InputSelect', link: '/guide/input-select' },
+                    { text: 'InputDatetime', link: '/guide/input-datetime' },
+                    { text: 'InputToggle', link: '/guide/input-toggle' },
                 ],
             },
         ],

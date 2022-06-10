@@ -17,7 +17,7 @@ const { handleSubmit } = useForm({
 
 <template>
     <form @submit="handleSubmit">
-        <InputText label="My Color" name="color" type="text" vertical />
+        <InputText label="Color" name="color" type="text" />
     </form>
 </template>
 ```
@@ -111,7 +111,7 @@ onMounted(() => {
 
 ## Types
 
-As `InputText` is designed to be used with text and number related input types. There is no visual different between these more specific types and the standard `text` type.
+`InputText` is designed to be used with text and number related input types. There is no visual different between these more specific types and the standard `text` type.
 
 ```html
 <InputText label="Number" name="number" type="number" />

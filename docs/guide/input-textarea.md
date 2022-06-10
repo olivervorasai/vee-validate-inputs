@@ -17,7 +17,7 @@ const { handleSubmit } = useForm({
 
 <template>
     <form @submit="handleSubmit">
-        <InputTextarea label="My Color" name="color" vertical />
+        <InputTextarea label="Color" name="color" />
     </form>
 </template>
 ```
@@ -94,6 +94,16 @@ onMounted(() => {
 ```
 
 <InputTextarea label="Color" name="colorError"/>
+
+## Built-in Custom Style
+
+### Flat style
+
+```html
+<InputTextarea label="Color" name="color" flat />
+```
+
+<InputTextarea label="Color" name="colorFlat" flat />
 
 ## Custom Heights
 
